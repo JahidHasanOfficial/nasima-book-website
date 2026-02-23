@@ -1,0 +1,14 @@
+[25-Jan-2026 06:09:40 UTC] PHP Warning:  number_format() expects parameter 1 to be float, string given in /home/remicogroup/remicoagro.com/itm-admin/user/product-list.php on line 78
+[25-Jan-2026 06:12:23 UTC] PHP Warning:  number_format() expects parameter 1 to be float, string given in /home/remicogroup/remicoagro.com/itm-admin/user/product-list.php on line 78
+[05-Feb-2026 09:18:28 UTC] PHP Warning:  number_format() expects parameter 1 to be float, string given in /home/remicogroup/remicoagro.com/itm-admin/user/product-list.php on line 78
+[05-Feb-2026 09:20:31 UTC] PHP Warning:  number_format() expects parameter 1 to be float, string given in /home/remicogroup/remicoagro.com/itm-admin/user/product-list.php on line 78
+[05-Feb-2026 10:05:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cat_photo' cannot be null in /home/remicogroup/remicoagro.com/itm-admin/user/product-category-add.php:95
+Stack trace:
+#0 /home/remicogroup/remicoagro.com/itm-admin/user/product-category-add.php(95): PDOStatement->execute()
+#1 {main}
+  thrown in /home/remicogroup/remicoagro.com/itm-admin/user/product-category-add.php on line 95
+[05-Feb-2026 10:32:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cat_photo' cannot be null in /home/remicogroup/remicoagro.com/itm-admin/user/product-category-add.php:95
+Stack trace:
+#0 /home/remicogroup/remicoagro.com/itm-admin/user/product-category-add.php(95): PDOStatement->execute()
+#1 {main}
+  thrown in /home/remicogroup/remicoagro.com/itm-admin/user/product-category-add.php on line 95
