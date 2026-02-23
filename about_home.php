@@ -1,6 +1,8 @@
 <section id="about" class="about section light-background">
 
-      <!-- Section Title -->
+      
+
+<!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
         <div class="title-shape">
@@ -23,12 +25,17 @@
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
               <span class="subtitle">About Me</span>
+  <?php
+          
+            $eq = mysqli_query($con, "select * from about_section where type=1 ");
+                  while ($eqrow = mysqli_fetch_array($eq)) {
 
-              <h2>UI/UX Designer &amp; Web Developer</h2>
+                  ?>
 
-              <p class="lead mb-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              <h2><?php echo $eqrow['about_title']; ?></h2>
+              <p class="mb-4"><?php echo $eqrow['about_subtitle']; ?></p>
 
-              <p class="mb-4">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+              <?php } ?>
 
               <div class="personal-info">
                 <div class="row g-4">
@@ -90,5 +97,5 @@
         </div>
 
       </div>
-
+  
     </section><!-- /About Section -->

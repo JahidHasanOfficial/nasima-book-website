@@ -1,3 +1,8 @@
+  <?php
+  require_once 'itm-admin/includes/conn.php';
+    require_once 'itm-admin/includes/dbconfig.php';
+?>
+  
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
