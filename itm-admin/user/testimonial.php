@@ -47,6 +47,7 @@
 
 										<th> SL</th>
 										<th> Name</th>
+										<th>Position</th>
 										<th>Title</th>
 										<th>Details</th>
 										<th>Picture</th>
@@ -65,6 +66,7 @@
 											<td><?php echo  ++$sl; ?></td>
 											<td><?php echo $eqrow['name']; ?></td>
 											<td><?php echo $eqrow['position']; ?></td>
+											<td><?php echo $eqrow['title']; ?></td>
 											<td><?php echo wordwrap($eqrow['details']); ?></td>
 											<td> <img src="user_images/<?php echo $eqrow['userPic']; ?>" class="img-rounded" height="65px;" width="60px;" /></td>
 											<td><a class="btn btn-info" href="testimonial-edit?edit_id=<?php echo $eqrow['ts_id']; ?>" title="click for edit" onclick="return confirm('Are You Sure To Edit ?')"><span class="bi bi-pencil-square"></span> </a>

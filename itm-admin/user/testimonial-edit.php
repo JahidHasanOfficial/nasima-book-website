@@ -24,6 +24,7 @@
   if (isset($_POST['btn_save_updates'])) {
     $PName = $_POST['PName'];
     $Position = $_POST['Position'];
+    $Title = $_POST['Title'];
     $Details = $_POST['Details'];
     $Rating = $_POST['Rating'];
     $imgFile = $_FILES['user_image']['name'];
@@ -33,7 +34,7 @@
     if ($imgFile) {
       $upload_dir = 'user_images/'; // upload directory	
       $imgExt = strtolower(pathinfo($imgFile, PATHINFO_EXTENSION)); // get image extension
-      $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
+      $valid_extensions = array('jpeg', 'jpg', 'png', 'gif', 'webp', 'svg', 'jfif', 'avif'); // valid extensions
       $userpic = $ImageNameWithSlug . "-" . rand(1000, 1000000) . "-" . $imgExt;
       if (in_array($imgExt, $valid_extensions)) {
         if ($imgSize < 5000000) {
@@ -56,6 +57,7 @@
       $stmt = $DB_con->prepare('UPDATE testimonial 
 									     SET  name =:PName,
 											  position=:Position,
+                        title=:Title,
 											  details=:Details,
                         rating=:Rating,
 										     userPic=:upic 
@@ -64,6 +66,7 @@
       $stmt->bindParam(':PName', $PName);
       $stmt->bindParam(':Position', $Position);
       $stmt->bindParam(':Rating', $Rating);
+      $stmt->bindParam(':Title', $Title);
       $stmt->bindParam(':Details', $Details);
       $stmt->bindParam(':upic', $userpic);
       $stmt->bindParam(':uid', $id);
@@ -132,8 +135,13 @@
                   </tr>
 
                   <tr>
+                    <td><label class="control-label">Position</label></td>
+                    <td><input class="form-control" type="text" name="Position" placeholder="Position" value="<?php echo $position; ?>" /></td>
+                  </tr>
+
+                  <tr>
                     <td><label class="control-label">Title</label></td>
-                    <td><input class="form-control" type="text" name="Position" placeholder="Title" value="<?php echo $position; ?>" /></td>
+                    <td><input class="form-control" type="text" name="Title" placeholder="Title" value="<?php echo $title; ?>" /></td>
                   </tr>
 
                   <tr class="d-none">

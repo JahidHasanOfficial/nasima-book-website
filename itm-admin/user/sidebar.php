@@ -19,6 +19,7 @@
       <ul id="home" class="nav-content collapse  <?= is_numeric(array_search($activePage, $home)) ? 'show' : ''; ?>" data-bs-parent="#sidebar-nav">
         <li><a href="slider" class="<?= ($activePage == 'slider' ||  $activePage == 'slider-add' ||  $activePage == 'slider-edit') ? 'active' : ''; ?>"><i class="bi bi-images"></i><span> Slider </span> </a> </li>
         <li><a href="hero-section-content" class="<?= ($activePage == 'hero-section-content' ||  $activePage == 'hero-section-content-add' ||  $activePage == 'hero-section-content-edit') ? 'active' : ''; ?>"><i class="bi bi-images"></i><span> Hero Section Content </span> </a> </li>
+        <li><a href="faq" class="<?= ($activePage == 'faq' ||  $activePage == 'faq-setting' ||  $activePage == 'faq-add' ||  $activePage == 'faq-edit') ? 'active' : ''; ?>"><i class="bi bi-images"></i><span> FAQ </span> </a> </li>
     
 		<!--
         <li><a href="brand" class="<?= ($activePage == 'brand' ||  $activePage == 'brand-add' ||  $activePage == 'brand-edit') ? 'active' : ''; ?>"><i class="bi bi-map"></i><span> Brand </span> </a> </li>
@@ -46,10 +47,10 @@
         <li><a href="team" class="<?= ($activePage == 'team' ||  $activePage == 'add-team' ||  $activePage == 'edit-team') ? 'active' : ''; ?>"><i class="bi bi-people-fill"></i><span> Management Team  </span> </a> </li>
        <li class=""><a href="why" class="<?= ($activePage == 'why' || $activePage == 'why-setting' ||  $activePage == 'why-add' ||  $activePage == 'why-edit') ? 'active' : ''; ?>"><i class="bi bi-person-check"></i><span> Why Chose Us</span> </a> </li>
        
-	   <!--
+	   
 	   <li><a href="testimonial" class="<?= ($activePage == 'testimonial' ||  $activePage == 'Testimonial-add' ||  $activePage == 'testimonial-edit') ? 'active' : ''; ?>"><i class="bi bi-chat-left-quote-fill"></i><span> Testimonial </span> </a> </li>
-       <li><a href="about-feature" class="<?= ($activePage == 'about-feature' || $activePage == 'about-feature-add' || $activePage == 'about-feature-edit') ? 'active' : ''; ?>"><i class="bi bi-card-checklist"></i><span> About Feature </span> </a> </li>
-         --> 
+       <!-- <li><a href="about-feature" class="<?= ($activePage == 'about-feature' || $activePage == 'about-feature-add' || $activePage == 'about-feature-edit') ? 'active' : ''; ?>"><i class="bi bi-card-checklist"></i><span> About Feature </span> </a> </li> -->
+         
       </ul>
     </li>
 	

@@ -54,7 +54,7 @@ if (isset($_SESSION['id'])) {
             <div style="margin-top:20px;margin-bottom:20px;">
            <!--  <img src="includes/lse-logo1.png" width="250px" /> ---> 
               <br>    
-              <h2> Remico Agro Industries</h2>			  
+              <h2> Nasima Book Shop </h2>			  
               <p>A Smart Website CMS</p>
             </div>
 

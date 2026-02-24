@@ -18,6 +18,7 @@
     $PName = $_POST['PName'];
     $Position = $_POST['Position'];
     $Rating = $_POST['Rating'];
+    $Title = $_POST['Title'];
     $Details = $_POST['Details'];
     $imgFile = $_FILES['user_image']['name'];
     $tmp_dir = $_FILES['user_image']['tmp_name'];
@@ -31,8 +32,7 @@
       $imgExt = strtolower(pathinfo($imgFile, PATHINFO_EXTENSION)); // get image extension
 
       // valid image extensions
-      $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
-
+      $valid_extensions = array('jpeg', 'jpg', 'png', 'gif', 'webp', 'svg', 'jfif', 'avif'); // valid extensions
       // rename uploading image 
       $userpic = $ImageNameWithSlug . "-" . rand(1000, 1000000) . "-" . $imgExt;
 
@@ -53,13 +53,14 @@
 
     // if no error occured, continue ....
     if (!isset($errMSG)) {
-      $stmt = $DB_con->prepare('INSERT INTO testimonial (user_id,   name,  position,  rating,  details, userPic) 
-														                    	VALUES(:user_id, :PName, :Position, :Rating, :Details, :upic)');
+      $stmt = $DB_con->prepare('INSERT INTO testimonial (user_id,   name,  position,  rating,  title, details, userPic) 
+														                    	VALUES(:user_id, :PName, :Position, :Rating, :Title, :Details, :upic)');
 
       $stmt->bindParam(':user_id', $user_id);
       $stmt->bindParam(':PName', $PName);
       $stmt->bindParam(':Position', $Position);
       $stmt->bindParam(':Rating', $Rating);
+      $stmt->bindParam(':Title', $Title);
       $stmt->bindParam(':Details', $Details);
       $stmt->bindParam(':upic', $userpic);
       if ($stmt->execute()) {
@@ -131,8 +132,13 @@
                   </tr>
 
                   <tr>
-                    <td><label class="control-label"> Title </label></td>
-                    <td><input class="form-control" type="text" name="Position" placeholder="Title" value="<?php echo $Position; ?>" /></td>
+                    <td><label class="control-label"> Position </label></td>
+                    <td><input class="form-control" type="text" name="Position" placeholder="Position" value="<?php echo $Position; ?>" /></td>
+                  </tr>
+
+                  <tr>
+                    <td><label class="control-label">Title</label></td>
+                    <td><input class="form-control" type="text" name="Title" placeholder="Title" value="<?php echo $Title; ?>" /></td>
                   </tr>
 
                   <tr class="d-none">

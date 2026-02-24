@@ -28,7 +28,9 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>FAQ Section | <span> <a href="faq-setting"> <i class="bi bi-gear"></i> </a> </span> | <span> <a href="faq-add"> <i class="bi bi-plus-square-fill"></i> </a> </span> </h1>
+      <h1>FAQ Section
+         <!-- | <span><a href="faq-setting"> <i class="bi bi-gear"></i> </a> </span> -->
+          | <span> <a href="faq-add"> <i class="bi bi-plus-square-fill"></i> </a> </span> </h1>
       <hr>
     </div>
 
