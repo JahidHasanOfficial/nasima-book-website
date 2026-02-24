@@ -28,27 +28,31 @@
               <div class="section-category mb-3">Contact</div>
               <h2 class="display-5 mb-4">Nemo enim ipsam voluptatem quia voluptas aspernatur</h2>
               <p class="lead mb-4">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
-
+ <?php
+                $eq = mysqli_query($con, "select * from contact ORDER BY id DESC LIMIT 1");
+                while ($eqrow = mysqli_fetch_array($eq)) {
+                ?>
               <div class="contact-info mt-5">
                 <div class="info-item d-flex mb-3">
                   <i class="bi bi-envelope-at me-3"></i>
-                  <span>info@example.com</span>
+                  <span><?php echo $eqrow['email']; ?></span>
                 </div>
 
                 <div class="info-item d-flex mb-3">
                   <i class="bi bi-telephone me-3"></i>
-                  <span>+1 5589 55488 558</span>
+                  <span><?php echo $eqrow['phone']; ?></span>
                 </div>
 
                 <div class="info-item d-flex mb-4">
                   <i class="bi bi-geo-alt me-3"></i>
-                  <span>A108 Adam Street, New York, NY 535022</span>
+                  <span><?php echo $eqrow['address']; ?></span>
                 </div>
 
-                <a href="#" class="map-link d-inline-flex align-items-center">
+                <a href="<?php echo $eqrow['map_link']; ?>" target="_blank" class="map-link d-inline-flex align-items-center">
                   Open Map
                   <i class="bi bi-arrow-right ms-2"></i>
                 </a>
+                  <?php } ?>
               </div>
             </div>
           </div>
@@ -71,15 +75,11 @@
                             $insert_query = "INSERT INTO contact_info (name, email, subject, message, entry_date) VALUES ('$name', '$email', '$subject', '$message', NOW())";
 
                             if (mysqli_query($con, $insert_query)) {
-                                echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                                        <strong>Thank you!</strong> Your message has been sent successfully. We will get back to you soon.
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                      </div>';
+                                echo "<script>window.location.href='contact.php?status=success';</script>";
+                                exit;
                             } else {
-                                echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                        <strong>Error!</strong> There was a problem sending your message. Please try again.
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                      </div>';
+                                echo "<script>window.location.href='contact.php?status=error';</script>";
+                                exit;
                             }
                         } else {
                             echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -88,10 +88,24 @@
                                   </div>';
                         }
                     }
+
+                    if (isset($_GET['status'])) {
+                        if ($_GET['status'] == 'success') {
+                            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong>Thank you!</strong> Your message has been sent successfully. We will get back to you soon.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                  </div>';
+                        } elseif ($_GET['status'] == 'error') {
+                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>Error!</strong> There was a problem sending your message. Please try again.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                  </div>';
+                        }
+                    }
                     ?>
 
 
-                <form action="forms/contact.php" method="post" class="php-email-form">
+                <form action="" method="post">
                   <div class="row gy-4">
 
                     <div class="col-12">
@@ -115,7 +129,7 @@
                       <div class="error-message"></div>
                       <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                      <button type="submit" class="btn btn-submit w-100">Submit Message</button>
+                      <button type="submit" name="submit_contact" class="btn btn-submit w-100">Submit Message</button>
                     </div>
 
                   </div>

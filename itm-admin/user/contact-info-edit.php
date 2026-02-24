@@ -31,6 +31,7 @@ if (isset($_POST['btn_save_updates'])) {
 	$Email = $_POST['Email'];
 	$Address = $_POST['Address'];
 	$Address2 = $_POST['Address2'];
+	$MapLink = $_POST['MapLink'];
 
 
 	$imgFile = $_FILES['user_image']['name'];
@@ -65,6 +66,7 @@ if (isset($_POST['btn_save_updates'])) {
 											  email=:Email,
 											  address=:Address,
 											  address2=:Address2,
+											  map_link=:MapLink,
 										     userPic=:upic 
 								       WHERE id=:uid');
 
@@ -73,6 +75,7 @@ if (isset($_POST['btn_save_updates'])) {
 		$stmt->bindParam(':Email', $Email);
 		$stmt->bindParam(':Address', $Address);
 		$stmt->bindParam(':Address2', $Address2);
+		$stmt->bindParam(':MapLink', $MapLink);
 		$stmt->bindParam(':upic', $userpic);
 		$stmt->bindParam(':uid', $id);
 
@@ -102,7 +105,7 @@ if (isset($_POST['btn_save_updates'])) {
 	
     <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-8">
 
           <div class="card">
             <div class="card-body">
@@ -160,6 +163,11 @@ if (isset($_POST['btn_save_updates'])) {
 			<tr>
 				<td><label class="control-label"> Factory Address </label></td>
 				<td><input class="form-control" type="text" name="Address2" placeholder="Factory Address" value="<?php echo $address2; ?>" /></td>
+			</tr>
+
+			<tr>
+				<td><label class="control-label"> Map Link <span class="text-danger">( Send a Link )</span> </label></td>
+				<td><textarea class="form-control" name="MapLink" placeholder="Map Link"><?php echo $map_link; ?></textarea></td>
 			</tr>
 
 

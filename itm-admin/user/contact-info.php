@@ -79,6 +79,11 @@ if (isset($_GET['delete_id'])) {
 					<td><?php echo $eqrow['address2']; ?></td>
 				</tr>
 
+				<tr>
+					<td><label class="control-label">Google Map Link</label></td>
+					<td><?php echo $eqrow['map_link']; ?></td>
+				</tr>
+
 
 				<tr class="d-none">
 					<td><label class="control-label">Image</label></td>

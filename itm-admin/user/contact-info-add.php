@@ -21,6 +21,7 @@ if (isset($_POST['btnsave'])) {
 	$Phone = $_POST['Phone'];
 	$Email = $_POST['Email'];
 	$Address = $_POST['Address'];
+	$MapLink = $_POST['MapLink'];
 
 
 	$imgFile = $_FILES['user_image']['name'];
@@ -58,8 +59,8 @@ if (isset($_POST['btnsave'])) {
 
 	// if no error occured, continue ....
 	if (!isset($errMSG)) {
-		$stmt = $DB_con->prepare('INSERT INTO contact (user_id,phone,email,address,userPic) 
-															VALUES(:user_id,:Phone,:Email,:Address,:upic)');
+		$stmt = $DB_con->prepare('INSERT INTO contact (user_id,phone,email,address,map_link, userPic) 
+															VALUES(:user_id,:Phone,:Email,:Address,:MapLink,:upic)');
 
 
 
@@ -68,6 +69,7 @@ if (isset($_POST['btnsave'])) {
 		$stmt->bindParam(':Phone', $Phone);
 		$stmt->bindParam(':Email', $Email);
 		$stmt->bindParam(':Address', $Address);
+		$stmt->bindParam(':MapLink', $MapLink);
 
 		$stmt->bindParam(':upic', $userpic);
 
@@ -148,6 +150,11 @@ if (isset($_POST['btnsave'])) {
 				<td><label class="control-label"> Address </label></td>
 				<td><input class="form-control" type="text" name="Address" placeholder="Address" value="<?php echo $Address; ?>" /></td>
 			</tr>
+
+				<tr>
+					<td><label class="control-label">Google Map Link </label></td>
+					<td><input class="form-control" type="text" name="MapLink" placeholder="Google Map Link" value="<?php echo $MapLink; ?>" /></td>
+				</tr>
 
 
 			<tr>
