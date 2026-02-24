@@ -4,8 +4,13 @@
 
         <div class="row align-items-center content">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h2>Crafting Digital Experiences with Passion</h2>
-            <p class="lead">Transforming ideas into elegant solutions through creative design and innovative development</p>
+              <?php
+            $sql = mysqli_query($con, "SELECT * FROM hero_section_content ORDER BY id DESC");
+            while ($srow = mysqli_fetch_assoc($sql)) {
+            ?>
+            <h2><?php echo $srow['title']; ?></h2>
+            <p class="lead"><?php echo $srow['subtitle']; ?></p>
+            <?php } ?>
             <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
               <a href="#portfolio" class="btn btn-primary">View My Work</a>
               <a href="#contact" class="btn btn-outline">Let's Connect</a>
@@ -45,15 +50,16 @@
                 }
               </script>
               <div class="swiper-wrapper align-items-center">
+                  <?php
+                    $sql = mysqli_query($con, "SELECT * FROM slider_section ORDER BY id DESC");
+                    while ($srow = mysqli_fetch_assoc($sql)) {
+                    ?>
                 <div class="swiper-slide">
-                  <img src="assets/img/services/services-1.webp" alt="" class="img-fluid" loading="lazy">
+                  <img src="itm-admin/user/user_images/<?php echo $srow['userPic']; ?>" alt="" class="img-fluid" loading="lazy">
                 </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/services/services-2.webp" alt="" class="img-fluid" loading="lazy">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/services/services-3.webp" alt="" class="img-fluid" loading="lazy">
-                </div>
+                   <?php } ?>
+
+              
               </div>
               <div class="swiper-pagination"></div>
             </div>
