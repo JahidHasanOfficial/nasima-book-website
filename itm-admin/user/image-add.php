@@ -136,7 +136,7 @@ if (isset($_POST['btnsave'])) {
 					<?php } ?>
 				</tr>
 
-				<tr class="d-none">
+				<tr class="">
 					<td><label class="control-label"> Title </label></td>
 					<td><input class="form-control" type="text" name="Title" placeholder=" Title" value="no title" /></td>
 				</tr>

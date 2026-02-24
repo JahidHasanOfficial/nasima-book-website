@@ -57,6 +57,40 @@
             <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
               <div class="card-body p-4 p-lg-5">
 
+               <?php
+                    // Handle form submission
+                    if (isset($_POST['submit_contact'])) {
+                        $name = mysqli_real_escape_string($con, $_POST['name']);
+                        $email = mysqli_real_escape_string($con, $_POST['email']);
+                        $subject = mysqli_real_escape_string($con, $_POST['subject']);
+                        $message = mysqli_real_escape_string($con, $_POST['message']);
+
+                        // Basic validation
+                        if (!empty($name) && !empty($email) && !empty($subject) && !empty($message)) {
+                            // Insert into contact_info table
+                            $insert_query = "INSERT INTO contact_info (name, email, subject, message, entry_date) VALUES ('$name', '$email', '$subject', '$message', NOW())";
+
+                            if (mysqli_query($con, $insert_query)) {
+                                echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong>Thank you!</strong> Your message has been sent successfully. We will get back to you soon.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                      </div>';
+                            } else {
+                                echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <strong>Error!</strong> There was a problem sending your message. Please try again.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                      </div>';
+                            }
+                        } else {
+                            echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>Warning!</strong> Please fill in all required fields.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                  </div>';
+                        }
+                    }
+                    ?>
+
+
                 <form action="forms/contact.php" method="post" class="php-email-form">
                   <div class="row gy-4">
 
@@ -90,6 +124,8 @@
               </div>
             </div>
           </div>
+
+              
 
         </div>
 

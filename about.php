@@ -45,59 +45,59 @@
             <div class="about-content">
               <span class="subtitle">About Me</span>
 
-              <h2>UI/UX Designer &amp; Web Developer</h2>
+            <?php
+          $eq = mysqli_query($con, "select * from about_section where type=1 ");
+          while ($eqrow = mysqli_fetch_array($eq)) {
 
-              <p class="lead mb-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+          ?>
 
-              <p class="mb-4">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+            <h2><?php echo $eqrow['about_title']; ?></h2>
+            <p class="mb-4"><?php echo $eqrow['about_subtitle']; ?></p>
 
-              <div class="personal-info">
-                <div class="row g-4">
-                  <div class="col-6">
+
+
+            <div class="personal-info">
+              <div class="row g-4">
+                <!-- <div class="col-6">
                     <div class="info-item">
                       <span class="label">Name</span>
                       <span class="value">Eliot Johnson</span>
                     </div>
-                  </div>
+                  </div> -->
 
-                  <div class="col-6">
-                    <div class="info-item">
-                      <span class="label">Phone</span>
-                      <span class="value">+123 456 7890</span>
-                    </div>
-                  </div>
-
-                  <div class="col-6">
-                    <div class="info-item">
-                      <span class="label">Age</span>
-                      <span class="value">26 Years</span>
-                    </div>
-                  </div>
-
-                  <div class="col-6">
-                    <div class="info-item">
-                      <span class="label">Email</span>
-                      <span class="value">email@example.com</span>
-                    </div>
-                  </div>
-
-                  <div class="col-6">
-                    <div class="info-item">
-                      <span class="label">Occupation</span>
-                      <span class="value">Lorem Engineer</span>
-                    </div>
-                  </div>
-
-                  <div class="col-6">
-                    <div class="info-item">
-                      <span class="label">Nationality</span>
-                      <span class="value">Ipsum</span>
-                    </div>
+                <div class="col-6">
+                  <div class="info-item">
+                    <span class="label"><?php echo $eqrow['support1']; ?></span>
+                    <!-- <span class="value">+123 456 7890</span> -->
                   </div>
                 </div>
-              </div>
 
-              <div class="signature mt-4">
+                <div class="col-6">
+                  <div class="info-item">
+                    <span class="label"><?php echo $eqrow['support2']; ?></span>
+                    <!-- <span class="value">26 Years</span> -->
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="info-item">
+                    <span class="label"><?php echo $eqrow['support3']; ?></span>
+                    <!-- <span class="value">email@example.com</span> -->
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="info-item">
+                    <span class="label"><?php echo $eqrow['support4']; ?></span>
+                    <!-- <span class="value">Lorem Engineer</span> -->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          <?php } ?>
+              <!-- <div class="signature mt-4">
                 <div class="signature-image">
                   <img src="assets/img/misc/signature-1.webp" alt="" class="img-fluid">
                 </div>
@@ -105,7 +105,7 @@
                   <h4>Eliot Johnson</h4>
                   <p>Adipiscing Elit, Lorem Ipsum</p>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
