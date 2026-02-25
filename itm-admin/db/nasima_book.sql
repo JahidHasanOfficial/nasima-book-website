@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Feb 23, 2026 at 09:04 PM
--- Server version: 11.4.10-MariaDB
--- PHP Version: 8.4.10
+-- Host: 127.0.0.1
+-- Generation Time: Feb 25, 2026 at 04:43 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.3.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `remicogroup_agro_web_db`
+-- Database: `nasima_book`
 --
 
 -- --------------------------------------------------------
@@ -36,7 +36,7 @@ CREATE TABLE `about_feature` (
   `why_icon` varchar(150) NOT NULL,
   `userPic` varchar(255) DEFAULT NULL,
   `date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `about_feature`
@@ -65,7 +65,7 @@ CREATE TABLE `about_section` (
   `support4` varchar(50) NOT NULL,
   `userPic` varchar(200) NOT NULL,
   `type` int(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `about_section`
@@ -93,7 +93,7 @@ CREATE TABLE `activitylog` (
   `userid` int(11) NOT NULL,
   `action` varchar(100) NOT NULL,
   `activity_date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `activitylog`
@@ -164,7 +164,7 @@ CREATE TABLE `apply` (
   `bld_grp` varchar(50) NOT NULL,
   `father_name` varchar(250) NOT NULL,
   `mother_name` varchar(250) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `apply`
@@ -199,7 +199,7 @@ CREATE TABLE `bld_grp` (
   `bld_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `bld_name` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `bld_grp`
@@ -226,7 +226,7 @@ CREATE TABLE `blog_category` (
   `cat_details` text NOT NULL,
   `link` varchar(500) NOT NULL,
   `cat_photo` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `blog_category`
@@ -257,16 +257,16 @@ CREATE TABLE `blog_section` (
   `description` mediumtext DEFAULT NULL,
   `author` varchar(255) DEFAULT NULL,
   `date` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `blog_section`
 --
 
 INSERT INTO `blog_section` (`id`, `user_id`, `category_id`, `title`, `slug`, `details`, `userPic`, `canonical_link`, `keyword`, `description`, `author`, `date`) VALUES
-(23, 140, 0, 'REMICO Logistics-Ensuring Timely Delivery', 'remico-logistics-ensuring-timely-delivery', '<p>REMICO Logistics provides reliable transport and distribution services, ensuring timely delivery for all our products nationwide.</p>', 'remico-group-506323-remico-logistics.jpg', '--', 'sdfsdf', 'sdfsdf', 'Admin', '2025-12-23 01:03:13'),
-(24, 140, 0, 'Top 5 Tips for Food Product Quality', 'top-5-tips-for-food-product-quality', '<p>Discover how REMICO Food Products maintains high hygiene standards, freshness, and nutritional value in every product.</p>', 'remico-group-532438-hero-slider2.jpg', '', '', '', 'Admin', '2025-12-23 01:07:03'),
-(25, 140, 0, 'How REMICO Supports Poultry Farmers', 'how-remico-supports-poultry-farmers', '<p>REMICO Breeders &amp; Chicks is committed to providing high-quality day-old chicks to poultry farmers across Bangladesh. Our mission is to ensure healthy and productive flocks for every client.</p>\r\n<p>Our team works closely with local farmers to provide technical support, vaccination guidance, and management practices that improve survival rates and productivity.</p>\r\n<h4 class=\"mt-4\">Our Approach</h4>\r\n<ul>\r\n<li>High-quality, disease-free chicks</li>\r\n<li>24/7 technical support for farmers</li>\r\n<li>Timely delivery and logistics support</li>\r\n<li>Guidance on feeding and farm management</li>\r\n</ul>\r\n<blockquote class=\"blockquote border-start border-4 border-primary ps-3 my-4\">\r\n<p class=\"mb-0\">\"Our goal is not just to supply chicks, but to empower farmers with knowledge and tools for sustainable poultry farming.\"</p>\r\n</blockquote>\r\n<p>By following strict quality control measures and modern farming techniques, REMICO ensures that each farmer receives reliable, healthy, and robust chicks, contributing to the growth of Bangladesh&rsquo;s poultry sector.</p>', 'remico-group-427407-concern2.jpg', '--', 'dgdf', 'd', 'Jahid', '2025-12-23 01:08:18');
+(23, 140, 0, 'REMICO Logistics-Ensuring Timely Delivery', 'remico-logistics-ensuring-timely-delivery', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>', 'remico-group-506323-remico-logistics.jpg', '--', 'sdfsdf', 'sdfsdf', 'Admin', '2025-12-23 01:03:13'),
+(24, 140, 0, 'Top 5 Tips for Food Product Quality', 'top-5-tips-for-food-product-quality', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>', 'remico-group-532438-hero-slider2.jpg', '', '', '', 'Admin', '2025-12-23 01:07:03'),
+(25, 140, 0, 'How REMICO Supports Poultry Farmers', 'how-remico-supports-poultry-farmers', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>', 'remico-group-427407-concern2.jpg', '--', 'dgdf', 'd', 'Jahid', '2025-12-23 01:08:18');
 
 -- --------------------------------------------------------
 
@@ -280,7 +280,7 @@ CREATE TABLE `choose_section` (
   `choose_title` varchar(200) NOT NULL,
   `choose_subtitle` varchar(200) NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `choose_section`
@@ -308,15 +308,16 @@ CREATE TABLE `contact` (
   `email` varchar(100) NOT NULL,
   `address` varchar(200) NOT NULL,
   `address2` varchar(100) NOT NULL,
+  `map_link` longtext NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`id`, `user_id`, `phone`, `email`, `address`, `address2`, `userPic`) VALUES
-(14, 140, '+88 01738-559316', 'remico.agro@@yahoo.com', 'Dhaka, Bangladesh', 'Jamadarpukur, Garidah Road, Shajahanpur, Bogura', '397557.jpg');
+INSERT INTO `contact` (`id`, `user_id`, `phone`, `email`, `address`, `address2`, `map_link`, `userPic`) VALUES
+(14, 140, '+88 01738-559316', 'remico.agro@@yahoo.com', 'Dhaka, Bangladesh', 'Jamadarpukur, Garidah Road, Shajahanpur, Bogura', 'https://maps.app.goo.gl/io3SHZDX4YiQU2sW9', '397557.jpg');
 
 -- --------------------------------------------------------
 
@@ -332,16 +333,14 @@ CREATE TABLE `contact_info` (
   `subject` varchar(200) NOT NULL,
   `message` varchar(1000) NOT NULL,
   `entry_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `contact_info`
 --
 
 INSERT INTO `contact_info` (`id`, `name`, `email`, `phone`, `subject`, `message`, `entry_date`) VALUES
-(321, 'Ankit S', 'info@bestaiseocompany.com', '', 'Re: SEO Packages and Costs', 'Hey team remicoagro.com,\r\n\r\nHope your doing well!\r\n\r\nI just following your website and realized that despite having a good design; but it was not ranking high on any of the Search Engines (Google, Yahoo & Bing) for most of the keywords related to your business.\r\n\r\nWe can place your website on Google\'s 1st page.\r\n\r\n*  Top ranking on Google search!\r\n*  Improve website clicks and views!\r\n*  Increase Your Leads, clients & Revenue!\r\n\r\nInterested? Please provide your name, contact information, and email.\r\n\r\nBests Regards,\r\nAnkit\r\nBest AI SEO Company\r\nAccounts Manager\r\nwww.bestaiseocompany.com\r\nPhone No: +1Â (949)Â 508-0277', '2026-01-25'),
-(322, 'test', 'test12@gmail.com', '', 'for test purpose', 'testing purpose', '2026-01-25'),
-(323, 'Bharat Pithiya', 'info@shiyushglobal.com', '', 'Exploring Import - Export Partnerships', 'Dear Md. Haider Ali Sarker,Â \r\nGreetings of the day!!Â \r\n\r\nI represent Shiyush Global. We are an exporter from India and can supply the following products in export grade:\r\n\r\nChickpeas (Desi Chana) â€“Â \r\nSoybeansÂ \r\nSorghum (Jowar)\r\nPearl Millet (Bajra)\r\nPeanuts (Groundnuts)Â \r\nWheat\r\nPigeon Peas\r\n\r\nIf you need any other products apart from this, we have large network of suppliers as well from India. We can source any other agriculture products for you from Indian suppliers as well.Â \r\n\r\n\r\nWe can supply any quantity with flexible delivery schedules. All products are cleaned, graded, and certified to international standards.\r\n\r\nRegards,Â \r\nBharat PithiyaÂ \r\n+91 9979878797\r\nShiyush GlobalÂ \r\nwww.shiyushglobal.com', '2026-02-03');
+(329, 'Natalie Cummings', 'rufy@mailinator.com', '', 'Sint nobis recusanda', 'Maxime eius reprehen', '2026-02-24');
 
 -- --------------------------------------------------------
 
@@ -353,7 +352,7 @@ CREATE TABLE `contact_subject` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `contact_subject`
@@ -377,14 +376,14 @@ CREATE TABLE `count` (
   `count2` int(50) NOT NULL,
   `count3` int(50) NOT NULL,
   `count4` int(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `count`
 --
 
 INSERT INTO `count` (`co_id`, `user_id`, `count1`, `count2`, `count3`, `count4`) VALUES
-(1, 140, 158, 49, 17, 567);
+(1, 140, 5, 100, 50, 567);
 
 -- --------------------------------------------------------
 
@@ -398,7 +397,7 @@ CREATE TABLE `faq_section` (
   `title` varchar(255) NOT NULL,
   `details` text NOT NULL,
   `date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `faq_section`
@@ -424,7 +423,7 @@ CREATE TABLE `feature1` (
   `image` varchar(255) DEFAULT NULL,
   `link1` varchar(255) DEFAULT NULL,
   `link2` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `feature1`
@@ -447,7 +446,7 @@ CREATE TABLE `feature2` (
   `image` varchar(255) DEFAULT NULL,
   `link1` varchar(255) DEFAULT NULL,
   `link2` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `feature2`
@@ -473,7 +472,7 @@ CREATE TABLE `features_all` (
   `link2` varchar(255) DEFAULT NULL,
   `feature_name` varchar(150) NOT NULL,
   `status` int(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `features_all`
@@ -497,7 +496,7 @@ CREATE TABLE `gallery` (
   `user_id` int(11) NOT NULL,
   `title` varchar(200) NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `gallery`
@@ -532,7 +531,7 @@ CREATE TABLE `header_section` (
   `link_two` mediumtext DEFAULT NULL,
   `details` text NOT NULL,
   `userPic` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `header_section`
@@ -558,14 +557,14 @@ CREATE TABLE `hero_section_content` (
   `user_id` int(11) NOT NULL,
   `title` varchar(200) NOT NULL,
   `subtitle` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `hero_section_content`
 --
 
 INSERT INTO `hero_section_content` (`id`, `user_id`, `title`, `subtitle`) VALUES
-(1, 140, 'REMICO AGRO INDUSTRIES', 'Quality Without Compromise <br>  Feed Manufacturer <br> An Award Winning Company Since 2007');
+(1, 140, 'Crafting Digital Experiences with Passion', 'Transforming ideas into elegant solutions through creative design and innovative development');
 
 -- --------------------------------------------------------
 
@@ -579,7 +578,7 @@ CREATE TABLE `join_title` (
   `title` varchar(300) NOT NULL,
   `sub_title` varchar(200) NOT NULL,
   `image` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `join_title`
@@ -600,7 +599,7 @@ CREATE TABLE `mission` (
   `name` varchar(200) NOT NULL,
   `details` longtext NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `mission`
@@ -622,7 +621,7 @@ CREATE TABLE `news_section` (
   `news_subtitle` longtext NOT NULL,
   `news_date` date NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `news_section`
@@ -644,7 +643,7 @@ CREATE TABLE `partner` (
   `pr_name` varchar(200) NOT NULL,
   `pr_details` varchar(200) NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `partner`
@@ -666,7 +665,7 @@ CREATE TABLE `password` (
   `passwordid` int(11) NOT NULL,
   `original` varchar(30) NOT NULL,
   `mdfive` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `password`
@@ -706,47 +705,16 @@ CREATE TABLE `products` (
   `price` varchar(40) NOT NULL,
   `offer_price` varchar(50) NOT NULL,
   `photo` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`pro_id`, `category_id`, `pdct_typ`, `user_id`, `product_name`, `short_details`, `details`, `size`, `weight`, `price`, `offer_price`, `photo`) VALUES
-(96, 10, 5, 140, 'Broiler Grower - 50Kg', 'Grower - 50Kg', 'Broiler Grower - 50Kg', '45', '50-Kg', '0', '2500', '-695025-broiler-grower-50-kg.jpg'),
-(97, 10, 5, 140, 'Broiler Grower Feed Sulov - 50Kg', 'broiler-grower-feed-sulov-50-kg', 'broiler-grower-feed-sulov-50-kg', '45', '50-Kg', '0', '3000', '-929588-broiler-grower-feed-sulov-50-kg.jpg'),
-(98, 10, 5, 140, 'Broiler Pre Starter 50-kg', 'Broiler-pre-starter-50-kg', '<p>Broiler-pre-starter-50-kg</p>', 'Na', '50-Kg', '0', '0', '-803961-broiler-pre-starter-50-kg.png'),
-(99, 10, 5, 140, 'Broiler Starter - 50kg', 'Broiler-starter-50-kg', '<p>Broiler-starter-50-kg</p>', 'Na', '50-Kg', '0', '0', '-432626-broiler-starter-50-kg.jpg'),
-(100, 10, 5, 140, 'Broiler Starter Sulov', 'Broiler-starter-feed-sulov-50-kg', '<p>Broiler-starter-feed-sulov-50-kg</p>', 'Na', '50-Kg', '0', '0', '-410634-broiler-starter-feed-sulov-50-kg.jpg'),
-(101, 11, 5, 140, 'Carp Grower - 20Kg', 'carp-grower2-20-kg', '<p>Carp-grower2-20-kg</p>', 'Na', '20-Kg', '0', '0', '-120589-carp-grower2-20-kg.jpg'),
-(102, 11, 5, 140, 'Carp Grower 25Kg', 'Carp-grower-25-kg', '<p>Carp-grower-25-kg</p>', 'Na', '25-Kg', '0', '0', '-444502-carp-grower-25-kg.jpg'),
-(103, 11, 5, 140, 'Carp Grower Economy', 'Carp-grower-economy-20-kg', '<p>Carp-grower-economy-20-kg</p>', 'Na', '20-Kg', '0', '0', '-366337-carp-grower-economy-20-kg.jpg'),
-(104, 11, 5, 140, 'Carp Grower Economy', 'Carp Grower Economy 25 Kg', '<p>Carp Grower Economy 25 Kg</p>', 'Na', '25-Kg', '0', '0', '-56268-carp-grower-economy-25-kg.jpg'),
-(105, 11, 5, 140, 'Carp Starter', 'Carp-starter-20-kg', '<p>Carp-starter-20-kg</p>', 'Na', '20-Kg', '0', '0', '-48996-carp-starter-20-kg.jpg'),
-(106, 11, 5, 140, 'Carp Starter Economy', 'Carp Starter Economy 20Kg', '<p>Carp Starter Economy 20Kg</p>', 'Na', '20-Kg', '0', '0', '-778143-carp-starter-economy-20-kg.jpg'),
-(107, 10, 5, 140, 'House Feed', 'House-feed-broiler-25-kg', '<p>House-feed-broiler-25-kg</p>', 'Na', '25-Kg', '0', '0', '-683790-house-feed-broiler-25-kg.jpg'),
-(108, 10, 5, 140, 'House Feed Cramble', 'House-feed - cramble-broiler-25-kg', '<p>House-feed - cramble-broiler-25-kg</p>', 'Na', '25-Kg', '0', '0', '-146895-house-feed-cramble-broiler-25-kg.jpg'),
-(109, 26, 5, 140, 'Layer Grower ', 'layer-grower-50-kg', '<p>layer-grower-50-kg</p>', 'Na', '50-Kg', '0', '0', '-300546-layer-grower-50-kg.jpg'),
-(110, 26, 5, 140, 'Layer Layer ', 'Layer Layer 50kg', '<p>Layer Layer 50kg</p>', 'Na', '50-Kg', '0', '0', '-922213-layer-layer-50-kg.jpg'),
-(111, 26, 5, 140, 'Layer Starter', 'Layer Starter 50kg', '<p>Layer Starter 50kg</p>', 'Na', '50-Kg', '0', '0', '-564464-layer-starter-50-kg.jpg'),
-(112, 25, 5, 140, 'My Meat', 'my-meat-25-kg', '<p>my-meat-25-kg</p>', 'Na', '25-Kg', '0', '0', '-7048-my-meat-25-kg.jpg'),
-(113, 25, 5, 140, 'My Meat Economy', 'My Meat Economy 25Kg', '<p>My Meat Economy 25Kg</p>', 'Na', '25-Kg', '0', '0', '-585768-my-meat-economy-25-kg.jpg'),
-(114, 25, 5, 140, 'My Meat Plus', 'my-meat-plus-25-kg', '<p>my-meat-plus-25-kg</p>', 'Na', '25-Kg', '0', '0', '-686732-my-meat-plus-25-kg.jpg'),
-(115, 25, 5, 140, 'My Meat Super', 'My Meat Super 25Kg', '<p>My Meat Super 25Kg</p>', 'Na', '25', '0', '0', '-901557-my-meat-super-25-kg.jpg'),
-(116, 25, 5, 140, 'My Milk', 'My Milk 40Kg', '<p>My Milk 40Kg</p>', 'Na', '40-Kg', '0', '0', '-1057-my-milk-40-kg.jpg'),
-(117, 25, 5, 140, 'My Milk Economy', 'My Milk Economy 40Kg', '<p>My Milk Economy 40Kg</p>', 'Na', '40-Kg', '0', '0', '-138820-my-milk-echonomy-40-kg.jpg'),
-(118, 25, 5, 140, 'My Milk Plus', 'My Milk Plus 25 Kg', '<p>My Milk Plus 25 Kg</p>', 'Na', '25-Kg', '0', '0', '-411259-my-milk-plus-25-kg.jpg'),
-(119, 25, 5, 140, 'My Milk Plus', 'My Milk Plus 40Kg', '<p>My Milk Plus 40Kg</p>', 'Na', '40-Kg', '0', '0', '-553455-my-milk-plus-40-kg.jpg'),
-(120, 25, 5, 140, 'My Milk Super', 'My Milk Super 25Kg', '<p>My Milk Super 25Kg</p>', 'Na', '25-Kg', '0', '0', '-83735-my-milk-super-25-kg.jpg'),
-(121, 11, 5, 140, 'Pangas Grower ', 'pangas-grower-20-kg', '<p>pangas-grower-20-kg</p>', 'Na', '20-Kg', '0', '0', '-361077-pangas-grower-20-kg.jpg'),
-(122, 11, 5, 140, 'Pangas Grower ', 'pangas-starter-20-kg', '<p>pangas-starter-20-kg</p>', 'Na', '20-Kg', '0', '0', '-336790-pangas-starter-20-kg.jpg'),
-(123, 27, 5, 140, 'Sonali Grower', 'sonali-grower-50-kg', '<p>sonali-grower-50-kg</p>', 'Na', '50-Kg', '0', '0', '-608509-sonali-grower-50-kg.jpg'),
-(124, 27, 5, 140, 'Sonali Grower Economy', 'sonali-grower-Economy-50-kg', '<p>sonali-grower-Economy-50-kg</p>', 'Na', '50-Kg', '0', '0', '-936130-sonali-grower-economy-50-kg.jpg'),
-(125, 27, 5, 140, 'Sonali Starter', 'Sonali Starter 50kg', '<p>Sonali Starter 50kg</p>', 'Na', '50-Kg', '0', '0', '-181574-sonali-starter-50-kg.jpg'),
-(126, 27, 5, 140, 'Sonali Starter Economy', 'Sonali Starter Economy 50kg', '<p>Sonali Starter Economy 50kg</p>', 'Na', '50', '0', '0', '-499628-sonali-starter-economy-50-kg.jpg'),
-(127, 11, 5, 140, 'Telapia Grower', 'Telapia Grower 20 Kg', '<p>Telapia Grower 20 Kg</p>', 'Na', '20-Kg', '0', '0', '-479952-telapia-grower-20-kg.jpg'),
-(128, 11, 5, 140, 'Telapia Starter', 'Telapia Starter 20 Kg', '<p>Telapia Starter 20 Kg</p>', 'Na', '20-Kg', '0', '0', '-429288-telapia-starter-20-kg.jpg'),
-(129, 28, 5, 140, 'Vusy Mix  - 25Kg', 'vusy-mix-25-kg', '<p>vusy-mix-25-kg</p>', 'Na', '25-Kg', '0', '0', '-371143-vusy-mix-25-kg.jpg');
+(95, 1, 5, 140, 'Atomic Habits', 'A practical guide to building good habits and breaking bad ones.', '<p data-start=\"154\" data-end=\"462\"><em data-start=\"154\" data-end=\"169\">Atomic Habits</em> is a powerful self-improvement book written by James Clear that focuses on how small habits can create big changes in life. Instead of encouraging dramatic transformations, this book teaches readers how tiny daily improvements—just 1% better each day—can lead to remarkable success over time.</p><p data-start=\"464\" data-end=\"781\">The main idea of the book is that habits shape our identity. James Clear explains that real change happens when you focus on who you want to become, not just what you want to achieve. For example, instead of saying “I want to read more,” you should think “I am a reader.” This mindset helps build long-lasting habits.</p><p data-start=\"783\" data-end=\"840\">The book introduces the <strong data-start=\"807\" data-end=\"839\">Four Laws of Behavior Change</strong>:</p><ol data-start=\"841\" data-end=\"927\">\r\n<li data-start=\"841\" data-end=\"861\">\r\n<p data-start=\"844\" data-end=\"861\">Make it obvious</p>\r\n</li>\r\n<li data-start=\"862\" data-end=\"885\">\r\n<p data-start=\"865\" data-end=\"885\">Make it attractive</p>\r\n</li>\r\n<li data-start=\"886\" data-end=\"903\">\r\n<p data-start=\"889\" data-end=\"903\">Make it easy</p>\r\n</li>\r\n<li data-start=\"904\" data-end=\"927\">\r\n<p data-start=\"907\" data-end=\"927\">Make it satisfying</p>\r\n</li>\r\n</ol><p data-start=\"929\" data-end=\"1129\">These four rules help readers create good habits and break bad ones. The author explains how our environment affects our behavior and how small changes in surroundings can make positive habits easier.</p><p data-start=\"1131\" data-end=\"1420\">James Clear also discusses habit tracking, habit stacking, and the power of consistency. He shows how successful people are not special; they simply follow systems that help them improve daily. The book is filled with real-life examples, scientific research, and easy-to-follow techniques.</p><p data-start=\"1422\" data-end=\"1696\"><em data-start=\"1422\" data-end=\"1437\">Atomic Habits</em> is suitable for students, professionals, entrepreneurs, and anyone who wants self-discipline and personal growth. It teaches patience, focus, and long-term thinking. This book helps readers build better routines in health, studies, career, and relationships.</p><p>\r\n\r\n\r\n\r\n\r\n\r\n\r\n</p><p data-start=\"1698\" data-end=\"1828\">Overall, <em data-start=\"1707\" data-end=\"1722\">Atomic Habits</em> is a practical and inspiring guide that proves success is built through small actions repeated every day.</p>', '42', '5-Kg', '8500', '700', '-647538-istockphoto-847756796-612x612.jpg'),
+(96, 28, 5, 140, 'The Alchemist', 'A story about following your dreams.', '<h3 style=\"margin-bottom: 20px; color: rgb(15, 41, 67); font-size: 28px; font-family: Questrial, sans-serif; background-color: rgb(248, 249, 250);\"><p data-start=\"1902\" data-end=\"2162\" style=\"\"><em data-start=\"1902\" data-end=\"1917\" style=\"\">The Alchemist</em> by Paulo Coelho is a famous inspirational novel that teaches readers about dreams, destiny, and self-discovery. It tells the story of Santiago, a young shepherd boy from Spain, who dreams of finding a hidden treasure near the Egyptian pyramids.</p><p data-start=\"2164\" data-end=\"2433\" style=\"\">Encouraged by a mysterious king, Santiago decides to follow his “Personal Legend,” which means his true purpose in life. During his journey, he meets different people including a merchant, an Englishman, and an alchemist. Each person teaches him important life lessons.</p><p data-start=\"2435\" data-end=\"2704\" style=\"\">The novel explains that when you truly desire something, the whole universe helps you achieve it. It encourages readers to listen to their hearts, trust themselves, and never give up on dreams. The desert, wind, and sun are used as symbols to show spiritual connection.</p><p data-start=\"2706\" data-end=\"2983\" style=\"\">One important theme of the book is courage. Santiago faces many difficulties, including loss, fear, and uncertainty. But he continues moving forward because he believes in his goal. The book also highlights love, showing that true love supports dreams instead of stopping them.</p><p data-start=\"2985\" data-end=\"3175\" style=\"\">The language of <em data-start=\"3001\" data-end=\"3016\">The Alchemist</em> is simple, poetic, and easy to understand. This makes it popular among readers of all ages. It has been translated into many languages and is loved worldwide.</p><p data-start=\"3177\" data-end=\"3348\" style=\"\">This book teaches that the real treasure is not money, but self-knowledge, wisdom, and inner peace. It inspires readers to follow their passion and live a meaningful life.</p><p data-start=\"1902\" data-end=\"2162\" style=\"\">\r\n\r\n\r\n\r\n\r\n\r\n</p><p data-start=\"3350\" data-end=\"3477\" style=\"\">Overall, <em data-start=\"3359\" data-end=\"3374\" style=\"\">The Alchemist</em> is a beautiful story that motivates people to believe in themselves and chase their dreams fearlessly.</p></h3>', '45', '2-Kg', '500tk', '2500', '-727230-istockphoto-495477978-612x612.jpg'),
+(97, 27, 5, 140, 'Rich Dad Poor Dad', 'guide to financial education and wealth building.', '<p data-start=\"3551\" data-end=\"3750\"><em data-start=\"3551\" data-end=\"3570\">Rich Dad Poor Dad</em> by Robert Kiyosaki is one of the most popular personal finance books in the world. It explains how people can become financially independent by changing their mindset about money.</p><p data-start=\"3752\" data-end=\"4025\">The book is based on the author’s experience of having two “fathers.” His real father (Poor Dad) was educated and worked hard for a salary. His friend’s father (Rich Dad) was a businessman who built wealth through investments. Both taught him different lessons about money.</p><p data-start=\"4027\" data-end=\"4311\">Kiyosaki explains that rich people focus on building assets, while poor and middle-class people focus on liabilities. Assets include businesses, stocks, and real estate that generate income. Liabilities include expensive cars, unnecessary loans, and luxury items that take money away.</p><p data-start=\"4313\" data-end=\"4582\">The book also teaches financial literacy, entrepreneurship, and risk-taking. It encourages readers to start small businesses, invest wisely, and learn how money works. The author emphasizes that schools do not teach enough about finance, so self-education is important.</p><p data-start=\"4584\" data-end=\"4799\">Another key lesson is “Make money work for you.” Instead of working only for salary, people should create multiple income sources. The book motivates readers to think creatively and break traditional job dependency.</p><p data-start=\"4801\" data-end=\"4985\"><em data-start=\"4801\" data-end=\"4820\">Rich Dad Poor Dad</em> is ideal for students, job holders, and entrepreneurs who want to improve their financial future. It changes how people think about savings, investment, and wealth.</p><p>\r\n\r\n\r\n\r\n\r\n\r\n</p><p data-start=\"4987\" data-end=\"5088\">Overall, this book is a guide to financial freedom and teaches readers how to build long-term wealth.</p>', '26', '2-Kg', '669', '550', '-997146-images.jpg');
 
 -- --------------------------------------------------------
 
@@ -762,19 +730,16 @@ CREATE TABLE `product_category` (
   `link` varchar(300) NOT NULL,
   `show_colum` int(20) NOT NULL,
   `cat_photo` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product_category`
 --
 
 INSERT INTO `product_category` (`cat_id`, `user_id`, `cat_name`, `cat_details`, `link`, `show_colum`, `cat_photo`) VALUES
-(10, 140, 'Broiler Feed', 'Na', 'Na', 4, '-48233-broiler-pre-starter-50-kg.png'),
-(11, 140, 'Fish Feed', 'Na', 'Na', 4, '-112755-carp-grower-25-kg.jpg'),
-(25, 140, 'Cattle Feed', 'Na', 'Na', 4, '-16205-my-meat-25-kg.jpg'),
-(26, 140, 'Layer', 'Na', 'Na', 4, '-687105-layer-grower-50-kg.jpg'),
-(27, 140, 'Sonali', 'Na', 'Na', 4, '-563204-sonali-starter-50-kg.jpg'),
-(28, 140, 'Vusi', 'Na', 'Na', 4, '-679574-vusy-mix-25-kg.jpg');
+(1, 140, 'Self-Help / Personal Development', 'Na', 'Na', 4, '-601939-istockphoto-495477978-612x612.jpg'),
+(27, 140, 'Finance / Business', 'Na', 'Na', 4, '-294884-istockphoto-1413549071-612x612.jpg'),
+(28, 140, 'Fiction / Inspirational', 'Na', 'Na', 4, '-815203-istockphoto-1328805778-612x612.jpg');
 
 -- --------------------------------------------------------
 
@@ -787,7 +752,7 @@ CREATE TABLE `product_type` (
   `user_id` int(200) NOT NULL,
   `type_name` varchar(200) NOT NULL,
   `status` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product_type`
@@ -836,7 +801,7 @@ CREATE TABLE `profiles` (
   `profile_image` varchar(255) DEFAULT NULL,
   `privacy_policy` tinyint(1) DEFAULT 0,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -852,7 +817,7 @@ CREATE TABLE `project` (
   `subtitle` varchar(255) NOT NULL,
   `details` text NOT NULL,
   `userPic` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `project`
@@ -880,7 +845,7 @@ CREATE TABLE `seo_section` (
   `author` varchar(255) NOT NULL,
   `breadcrumb_title` varchar(255) DEFAULT NULL,
   `breadcrumb_subtitle` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `seo_section`
@@ -914,7 +879,7 @@ CREATE TABLE `service` (
   `details` longtext NOT NULL,
   `userPic` varchar(255) NOT NULL,
   `entry_date` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `service`
@@ -944,7 +909,7 @@ CREATE TABLE `services_feature` (
   `image` varchar(255) DEFAULT NULL,
   `link1` varchar(255) DEFAULT NULL,
   `link2` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `services_feature`
@@ -966,7 +931,7 @@ CREATE TABLE `service_category` (
   `cat_details` text NOT NULL,
   `link` varchar(500) NOT NULL,
   `cat_photo` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `service_category`
@@ -987,7 +952,7 @@ CREATE TABLE `skill_section` (
   `user_id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   `percent` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `skill_section`
@@ -1013,7 +978,7 @@ CREATE TABLE `slider_section` (
   `link1` varchar(250) NOT NULL,
   `link2` varchar(250) NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `slider_section`
@@ -1039,7 +1004,7 @@ CREATE TABLE `social_media` (
   `instagram` varchar(100) NOT NULL,
   `tiktok` varchar(255) DEFAULT NULL,
   `linkedin` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `social_media`
@@ -1061,7 +1026,7 @@ CREATE TABLE `stats` (
   `st_num` varchar(100) NOT NULL,
   `icon` varchar(255) DEFAULT NULL,
   `userPic` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `stats`
@@ -1110,7 +1075,7 @@ CREATE TABLE `students` (
   `join_date` date NOT NULL,
   `status` int(11) NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `students`
@@ -1134,7 +1099,7 @@ CREATE TABLE `stuff` (
   `stuff_name` varchar(50) NOT NULL,
   `position` varchar(500) NOT NULL,
   `contact_info` varchar(50) NOT NULL,
-  `business_name` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `business_name` varchar(500) CHARACTER SET utf8 NOT NULL,
   `business_details` varchar(250) NOT NULL,
   `service_charge` varchar(250) NOT NULL,
   `business_phone` varchar(100) NOT NULL,
@@ -1152,7 +1117,7 @@ CREATE TABLE `stuff` (
   `district_id` int(11) NOT NULL,
   `upazila_id` int(11) NOT NULL,
   `inv_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `stuff`
@@ -1191,7 +1156,7 @@ CREATE TABLE `stuff_details` (
   `district_id` int(11) NOT NULL,
   `upazila_id` int(11) NOT NULL,
   `entry_date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1206,7 +1171,7 @@ CREATE TABLE `success_student_section` (
   `title` varchar(255) NOT NULL,
   `details` mediumtext NOT NULL,
   `userPic` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `success_student_section`
@@ -1228,7 +1193,7 @@ CREATE TABLE `teacher_section` (
   `teacher_title` varchar(255) NOT NULL,
   `teacher_subtitle` varchar(255) NOT NULL,
   `userPic` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `teacher_section`
@@ -1251,7 +1216,7 @@ CREATE TABLE `team_section` (
   `team_subtitle` varchar(200) NOT NULL,
   `email` varchar(50) NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `team_section`
@@ -1274,18 +1239,19 @@ CREATE TABLE `testimonial` (
   `name` varchar(100) NOT NULL,
   `rating` int(11) NOT NULL,
   `position` varchar(200) NOT NULL,
+  `title` text NOT NULL,
   `details` text NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `testimonial`
 --
 
-INSERT INTO `testimonial` (`ts_id`, `user_id`, `name`, `rating`, `position`, `details`, `userPic`) VALUES
-(2, 140, 'Alexander Bell', 1, 'Customer Satisfaction', '<div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\" bis_skin_checked=\"1\"><div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\" bis_skin_checked=\"1\">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</div></div>', 'digital-training-center-772667-jpg'),
-(6, 140, 'Boris Johnson', 1, 'Sustainable Material', '<p>Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed&nbsp;<span style=\"background-color: rgba(0, 0, 0, 0);\">stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna&nbsp;</span><span style=\"background-color: rgba(0, 0, 0, 0);\">dolore erat</span><span style=\"background-color: rgba(0, 0, 0, 0);\">&nbsp;amet</span></p>', 'digital-training-center-540698-jpg'),
-(7, 140, 'Bradley Gordon', 1, 'Budget Friendly', '<p>Diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>', 'digital-training-center-503015-jpg');
+INSERT INTO `testimonial` (`ts_id`, `user_id`, `name`, `rating`, `position`, `title`, `details`, `userPic`) VALUES
+(2, 140, 'Alexander Bell', 1, 'Customer Satisfaction', 'justo et tempor eirmod magna dolore erat amet', '<div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\" bis_skin_checked=\"1\"><div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\" bis_skin_checked=\"1\">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</div></div>', 'remico-group-663187-webp'),
+(6, 140, 'Boris Johnson', 1, 'Sustainable Material', 'justo et tempor eirmod magna dolore erat amet', '<p>Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed <span style=\"background-color: rgba(0, 0, 0, 0);\">stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna </span><span style=\"background-color: rgba(0, 0, 0, 0);\">dolore erat</span><span style=\"background-color: rgba(0, 0, 0, 0);\"> amet</span></p>', 'remico-group-480990-webp'),
+(7, 140, 'Bradley Gordon', 1, 'Budget Friendly', 'justo et tempor eirmod magna dolore erat amet', '<p>Diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>', 'remico-group-788197-webp');
 
 -- --------------------------------------------------------
 
@@ -1298,7 +1264,7 @@ CREATE TABLE `title_name` (
   `location` varchar(200) NOT NULL,
   `name` varchar(200) NOT NULL,
   `stutas` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `title_name`
@@ -1323,7 +1289,7 @@ CREATE TABLE `user` (
   `access_level` int(11) NOT NULL,
   `status` int(11) NOT NULL,
   `expire_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -1355,7 +1321,7 @@ CREATE TABLE `userlog` (
   `userid` int(11) NOT NULL,
   `login` datetime NOT NULL,
   `logout` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1368,7 +1334,7 @@ CREATE TABLE `user_password` (
   `email` varchar(50) NOT NULL,
   `original` varchar(30) NOT NULL,
   `mdfive` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_password`
@@ -1398,7 +1364,7 @@ CREATE TABLE `user_profile` (
   `access_level` int(11) NOT NULL,
   `status` int(11) NOT NULL,
   `expire_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_profile`
@@ -1425,7 +1391,7 @@ CREATE TABLE `user_stuff` (
   `email` varchar(50) NOT NULL,
   `position` varchar(500) DEFAULT NULL,
   `contact_info` varchar(50) DEFAULT NULL,
-  `business_name` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `business_name` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
   `business_details` varchar(250) DEFAULT NULL,
   `service_charge` varchar(250) DEFAULT NULL,
   `business_phone` varchar(100) DEFAULT NULL,
@@ -1443,7 +1409,7 @@ CREATE TABLE `user_stuff` (
   `district_id` int(11) DEFAULT NULL,
   `upazila_id` int(11) DEFAULT NULL,
   `inv_name` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_stuff`
@@ -1469,7 +1435,7 @@ CREATE TABLE `value` (
   `name` varchar(200) NOT NULL,
   `details` longtext NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `value`
@@ -1491,7 +1457,7 @@ CREATE TABLE `video` (
   `link` text NOT NULL,
   `userPic` varchar(255) NOT NULL,
   `date` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `video`
@@ -1517,7 +1483,7 @@ CREATE TABLE `vision` (
   `name` varchar(200) NOT NULL,
   `details` longtext NOT NULL,
   `userPic` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `vision`
@@ -1541,7 +1507,7 @@ CREATE TABLE `why_section` (
   `why_icon` varchar(150) NOT NULL,
   `userPic` varchar(255) DEFAULT NULL,
   `date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `why_section`
@@ -1943,7 +1909,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `contact_info`
 --
 ALTER TABLE `contact_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=324;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=330;
 
 --
 -- AUTO_INCREMENT for table `contact_subject`
@@ -1973,61 +1939,13 @@ ALTER TABLE `hero_section_content`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `pro_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
+  MODIFY `pro_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT for table `product_category`
 --
 ALTER TABLE `product_category`
   MODIFY `cat_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
-
---
--- AUTO_INCREMENT for table `product_type`
---
-ALTER TABLE `product_type`
-  MODIFY `ptype_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `service`
---
-ALTER TABLE `service`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `slider_section`
---
-ALTER TABLE `slider_section`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `team_section`
---
-ALTER TABLE `team_section`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
-
---
--- AUTO_INCREMENT for table `testimonial`
---
-ALTER TABLE `testimonial`
-  MODIFY `ts_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `video`
---
-ALTER TABLE `video`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
-
---
--- AUTO_INCREMENT for table `vision`
---
-ALTER TABLE `vision`
-  MODIFY `ms_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `why_section`
---
-ALTER TABLE `why_section`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
