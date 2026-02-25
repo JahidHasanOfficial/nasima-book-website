@@ -1,11 +1,11 @@
   <?php
   require_once 'itm-admin/includes/conn.php';
-    require_once 'itm-admin/includes/dbconfig.php';
-?>
-  
+  require_once 'itm-admin/includes/dbconfig.php';
+  ?>
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">

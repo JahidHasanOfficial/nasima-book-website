@@ -19,21 +19,21 @@
 
             <div class="faq-container">
 
-                        <?php
-            $sql = mysqli_query($con, "SELECT * FROM faq_section ORDER BY id DESC");
-            $isFirstFaq = true;
-            while ($frow = mysqli_fetch_array($sql)) {
-            ?>
-              <div class="faq-item <?= $isFirstFaq ? 'faq-active' : '' ?>">
-                <h3><?= $frow['title'] ?></h3>
-                <div class="faq-content">
-                  <p><?= $frow['details'] ?></p>
+              <?php
+              $sql = mysqli_query($con, "SELECT * FROM faq_section ORDER BY id DESC");
+              $isFirstFaq = true;
+              while ($frow = mysqli_fetch_array($sql)) {
+              ?>
+                <div class="faq-item <?= $isFirstFaq ? 'faq-active' : '' ?>">
+                  <h3><?= $frow['title'] ?></h3>
+                  <div class="faq-content">
+                    <p><?= $frow['details'] ?></p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
                 </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <?php 
-              $isFirstFaq = false;
-            } ?>
+              <?php
+                $isFirstFaq = false;
+              } ?>
               <!-- End Faq item-->
             </div>
           </div>

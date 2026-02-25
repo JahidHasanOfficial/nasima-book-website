@@ -27,7 +27,6 @@
 
   <main class="main">
 
-
     <!-- Service Details Section -->
     <section id="service-details" class="service-details section bg-light">
 

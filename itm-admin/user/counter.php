@@ -33,10 +33,10 @@
                 <thead class="bg-light">
                   <tr>
                     <th>SL</th>
-                    <th>Registered Profile</th>
-                    <th>Verified Profile</th>
-                    <th>Works Counter</th>
-                    <th>Project In Progress</th>
+                    <th>Years Experience</th>
+                    <th>Projects Completed</th>
+                    <th>Happy Clients</th>
+                    <!-- <th>Project In Progress</th> -->
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -53,7 +53,7 @@
                       <td><?php echo $eqrow['count1']; ?></td>
                       <td><?php echo $eqrow['count2']; ?></td>
                       <td><?php echo $eqrow['count3']; ?></td>
-                      <td><?php echo $eqrow['count4']; ?></td>
+                      <!-- <td><?php echo $eqrow['count4']; ?></td> -->
 
 
                       <td>

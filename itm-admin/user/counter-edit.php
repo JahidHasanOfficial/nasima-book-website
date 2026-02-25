@@ -116,21 +116,21 @@
 
 
                   <tr>
-                    <td><label class="control-label">Registered Profile</label></td>
+                    <td><label class="control-label">Years Experience</label></td>
                     <td><input class="form-control" type="text" name="Count1" value="<?php echo $count1; ?>" required /></td>
                   </tr>
 
                   <tr>
-                    <td><label class="control-label">Verified Profile</label></td>
+                    <td><label class="control-label">Projects Completed</label></td>
                     <td><input class="form-control" type="text" name="Count2" value="<?php echo $count2; ?>" required /></td>
                   </tr>
 
                   <tr>
-                    <td><label class="control-label">Works Counter</label></td>
+                    <td><label class="control-label">Happy Clients</label></td>
                     <td><input class="form-control" type="text" name="Count3" value="<?php echo $count3; ?>" required /></td>
                   </tr>
 
-                  <tr>
+                  <tr class="d-none">
                     <td><label class="control-label">Project In Progress</label></td>
                     <td><input class="form-control" type="text" name="Count4" value="<?php echo $count4; ?>" required /></td>
                   </tr>

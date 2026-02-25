@@ -1,7 +1,4 @@
 <section id="about" class="about section light-background">
-
-
-
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>About</h2>
@@ -34,9 +31,6 @@
 
             <h2><?php echo $eqrow['about_title']; ?></h2>
             <p class="mb-4"><?php echo $eqrow['about_subtitle']; ?></p>
-
-
-
             <div class="personal-info">
               <div class="row g-4">
                 <!-- <div class="col-6">
@@ -91,7 +85,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
 </section><!-- /About Section -->
