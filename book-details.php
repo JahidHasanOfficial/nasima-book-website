@@ -4,20 +4,29 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Book Details</title>
+
+
+  <?php
+  include('head_link.php');
+  if (isset($_GET['view'])) {
+    $pro_id = $_GET['view'];
+    $eq = mysqli_query($con, "select distinct products.category_id, products.pro_id,products.product_name,products.short_details,products.details,products.size,products.weight,products.price,products.offer_price,products.photo,product_category.user_id,product_category.cat_name,product_category.cat_details,product_category.cat_photo from product_category left join products on products.category_id = product_category.cat_id where products.pro_id = '$pro_id'");
+    $prow = mysqli_fetch_array($eq);
+  }
+  ?>
+
+  <title>Book Details - <?php echo isset($prow['product_name']) ? $prow['product_name'] : ''; ?></title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-
-   <?php include('head_link.php'); ?>
 
 </head>
 
 <body class="service-details-page">
 
-   <?php include('header_nav.php'); ?>
-   
+  <?php include('header_nav.php'); ?>
+
   <main class="main">
- 
+
 
     <!-- Service Details Section -->
     <section id="service-details" class="service-details section bg-light">
@@ -27,11 +36,11 @@
         <div class="row gy-4">
 
           <div class="col-lg-12">
-          <div class="shadow rounded p-2 text-center">
-		  <h3 class="fw-bold">Digital Marketing Solutions</h3>
-		  </div>
-		  </div>
-		  
+            <div class="shadow rounded p-2 text-center">
+              <h3 class="fw-bold"><?php echo isset($prow['product_name']) ? $prow['product_name'] : ''; ?></h3>
+            </div>
+          </div>
+
           <div class="col-lg-7">
             <div class="service-details-slider swiper init-swiper">
               <script type="application/json" class="swiper-config">
@@ -51,98 +60,49 @@
               </script>
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <img src="assets/img/services/services-1.webp" alt="" class="img-fluid" loading="lazy">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/services/services-2.webp" alt="" class="img-fluid" loading="lazy">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/services/services-3.webp" alt="" class="img-fluid" loading="lazy">
+                  <img src="itm-admin/user/user_images/<?php echo isset($prow['photo']) ? $prow['photo'] : ''; ?>" alt="" class="img-fluid" loading="lazy">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
 
             <div class="content mt-5">
-              <h3>Digital Marketing Solutions</h3>
+              <h3><?php echo isset($prow['product_name']) ? $prow['product_name'] : ''; ?></h3>
               <p>
-                Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka. Aut quiatem. Ut earum tempore quidem qui recusandae distinctio quo.
+                <?php echo isset($prow['short_details']) ? $prow['short_details'] : ''; ?>
               </p>
               <p>
-                Et officiis id est ad voluptates sint quia architecto aut soluta eum voluptatum rerum illo mara. Ut earum tempore quidem qui recusandae distinctio quo. Veniam maiores eos cumque distinctio.
-              </p>
-
-              <div class="features mt-4">
-                <div class="row gy-4">
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-box d-flex align-items-center">
-                      <i class="bi bi-check"></i>
-                      <h4>Search Engine Optimization</h4>
-                    </div>
-                  </div>
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-box d-flex align-items-center">
-                      <i class="bi bi-check"></i>
-                      <h4>Social Media Marketing</h4>
-                    </div>
-                  </div>
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-box d-flex align-items-center">
-                      <i class="bi bi-check"></i>
-                      <h4>Content Marketing Strategy</h4>
-                    </div>
-                  </div>
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-box d-flex align-items-center">
-                      <i class="bi bi-check"></i>
-                      <h4>Email Marketing Campaigns</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <p class="mt-4">
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                <?php echo isset($prow['details']) ? $prow['details'] : ''; ?>
               </p>
             </div>
           </div>
 
           <div class="col-lg-5">
             <div class="service-info">
-              <h4>Service Information</h4>
-              <div class="info-item">                
-                <h5> <i class="bi bi-clock"></i> Project Duration</h5>
-                <p>3-6 months</p>
+              <h4>Book Details</h4>
+              <div class="info-item">
+                <h5> <i class="bi bi-tag"></i> Category</h5>
+                <p><?php echo isset($prow['cat_name']) ? $prow['cat_name'] : ''; ?></p>
               </div>
               <div class="info-item">
-                <i class="bi bi-person-check"></i> 
-                <h5>Project Manager</h5>
-                <p>Sarah Johnson</p>
+                <i class="bi bi-box"></i>
+                <h5>Size</h5>
+                <p><?php echo isset($prow['size']) ? $prow['size'] : ''; ?></p>
               </div>
               <div class="info-item">
-                <i class="bi bi-telephone"></i>
-                <h5>Contact Support</h5>
-                <p>+1 (555) 123-4567</p>
+                <i class="bi bi-inboxes"></i>
+                <h5>Weight</h5>
+                <p><?php echo isset($prow['weight']) ? $prow['weight'] : ''; ?></p>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-currency-dollar"></i>
+                <h5>Price</h5>
+                <p><del>$<?php echo isset($prow['price']) ? $prow['price'] : ''; ?></del> <strong>$<?php echo isset($prow['offer_price']) ? $prow['offer_price'] : ''; ?></strong></p>
               </div>
             </div>
 
-            <div class="related-services mt-5">
-              <h4>Related Services</h4>
-              <div class="service-item">
-                <i class="bi bi-bar-chart"></i>
-                <h5><a href="#">Business Analytics</a></h5>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-              </div>
-              <div class="service-item">
-                <i class="bi bi-briefcase"></i>
-                <h5><a href="#">Business Consulting</a></h5>
-                <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-              </div>
-              <div class="service-item">
-                <i class="bi bi-graph-up"></i>
-                <h5><a href="#">Financial Planning</a></h5>
-                <p>Sed perspiciatis omnis iste natus error sit voluptatem doloremque</p>
-              </div>
+            <div class="related-services mt-5 d-none">
+              <!-- Related services can be here -->
             </div>
           </div>
 

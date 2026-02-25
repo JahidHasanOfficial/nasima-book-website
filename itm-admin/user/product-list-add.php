@@ -238,7 +238,7 @@
                                         <td><textarea name="details" id="summernote" placeholder="Details"><?php echo $details; ?></textarea></td>
                                     </tr>
 									
-                                    <tr class="d-none">
+                                    <tr class="">
                                         <td><label class="control-label"> Size </label></td>
                                         <td><input class="form-control" type="text" name="size" placeholder="Size" value="<?php echo ($size !== "") ? $size : 'Na'; ?>" required /></td>
                                     </tr>
@@ -253,7 +253,7 @@
                                         <td><input class="form-control" type="text" name="price" placeholder="Price" value="<?php echo $price ?>" required /></td>
                                     </tr>
 									
-									<tr class="d-none">
+									<tr class="">
                                         <td><label class="control-label"> Offer Price </label></td>
                                         <td><input class="form-control" type="text" name="OfferPrice" placeholder="Price" value="<?php echo ($offer_price !== "") ? $offer_price : '0'; ?>" required /></td>
                                     </tr>
