@@ -34,7 +34,7 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Product List | <span> <a href="product-list-add"> <i class="bi bi-plus-square-fill"></i> </a> </span> </h1>
+            <h1>Book List | <span> <a href="product-list-add"> <i class="bi bi-plus-square-fill"></i> </a> </span> </h1>
             <hr>
         </div>
 
@@ -51,9 +51,7 @@
                                     <tr>
 
                                         <th>SL</th>
-                                        <th>Name</th>
-                                        <th>Category</th>
-                                        <th>Weight</th>
+                                        <th>Name</th>  
                                         <th>Price</th>
                                         <th>Photo</th>
 
@@ -72,9 +70,7 @@
                                     ?>
                                         <tr>
                                             <td class="align-middle"><?php echo  ++$sl; ?></td>
-                                            <td class="align-middle"><?php echo $eqrow['product_name']; ?></td>
-                                            <td class="align-middle"><?php echo mysqli_fetch_array(mysqli_query($con, 'SELECT product_category.cat_name FROM product_category WHERE cat_id="' . $eqrow['category_id'] . '"'))['cat_name'] ?? ''; ?></td>
-                                            <td class="align-middle"><?php echo $eqrow['weight']; ?></td>
+                                            <td class="align-middle"><?php echo $eqrow['product_name']; ?></td> 
                                             <td class="align-middle"><?php echo number_format($eqrow['price']); ?></td>
                                             <td class="align-middle"> <img src="user_images/<?php echo $eqrow['photo']; ?>" class="img-rounded" height="65px;" width="60px;" /></td>
 

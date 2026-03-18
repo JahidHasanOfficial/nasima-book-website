@@ -1,0 +1,42 @@
+[09-Mar-2026 13:34:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/nasimanwara/public_html/itm-admin/includes/conn.php:2
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/includes/conn.php(2): mysqli_connect()
+#1 /home/nasimanwara/public_html/head_link.php(2): require_once('/home/nasimanwa...')
+#2 /home/nasimanwara/public_html/book-list.php(11): include('/home/nasimanwa...')
+#3 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/includes/conn.php on line 2
+[09-Mar-2026 13:34:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/nasimanwara/public_html/itm-admin/includes/conn.php:2
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/includes/conn.php(2): mysqli_connect()
+#1 /home/nasimanwara/public_html/head_link.php(2): require_once('/home/nasimanwa...')
+#2 /home/nasimanwara/public_html/book-list.php(11): include('/home/nasimanwa...')
+#3 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/includes/conn.php on line 2
+[09-Mar-2026 13:35:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/nasimanwara/public_html/itm-admin/includes/conn.php:2
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/includes/conn.php(2): mysqli_connect()
+#1 /home/nasimanwara/public_html/head_link.php(2): require_once('/home/nasimanwa...')
+#2 /home/nasimanwara/public_html/book-list.php(11): include('/home/nasimanwa...')
+#3 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/includes/conn.php on line 2
+[09-Mar-2026 13:35:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/nasimanwara/public_html/itm-admin/includes/conn.php:2
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/includes/conn.php(2): mysqli_connect()
+#1 /home/nasimanwara/public_html/head_link.php(2): require_once('/home/nasimanwa...')
+#2 /home/nasimanwara/public_html/book-list.php(11): include('/home/nasimanwa...')
+#3 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/includes/conn.php on line 2
+[09-Mar-2026 13:35:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/nasimanwara/public_html/itm-admin/includes/conn.php:2
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/includes/conn.php(2): mysqli_connect()
+#1 /home/nasimanwara/public_html/head_link.php(2): require_once('/home/nasimanwa...')
+#2 /home/nasimanwara/public_html/index.php(10): include('/home/nasimanwa...')
+#3 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/includes/conn.php on line 2
+[09-Mar-2026 13:35:18 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/nasimanwara/public_html/itm-admin/includes/conn.php:2
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/includes/conn.php(2): mysqli_connect()
+#1 /home/nasimanwara/public_html/head_link.php(2): require_once('/home/nasimanwa...')
+#2 /home/nasimanwara/public_html/index.php(10): include('/home/nasimanwa...')
+#3 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/includes/conn.php on line 2

@@ -55,9 +55,13 @@
                 <div class="portfolio-card">
                   <div class="portfolio-image">
                     <img src="itm-admin/user/user_images/<?php echo $trow['userPic']; ?>" class="img-fluid" alt="" loading="lazy">
-                  </div>
-                  <div class="portfolio-content">
-
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-actions">
+                        <a href="itm-admin/user/user_images/<?php echo $trow['userPic']; ?>" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                      </div>
+                    </div>
+				  </div>
+                  <div class="portfolio-content text-center">
                     <h3><?php echo $trow['title']; ?></h3>
                   </div>
                 </div>

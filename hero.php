@@ -12,29 +12,10 @@
              <p class="lead"><?php echo $srow['subtitle']; ?></p>
            <?php } ?>
            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
-             <a href="book-list" class="btn btn-primary">View My Book</a>
-             <a href="contact" class="btn btn-outline">Let's Connect</a>
+             <a href="book-list" class="btn btn-primary">View My Books</a>
+             <a href="contact" class="btn btn-outline">About Me</a>
            </div>
 
-           <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
-              <?php
-            $sql = mysqli_query($con, "SELECT * FROM count ORDER BY co_id DESC");
-            while ($srow = mysqli_fetch_assoc($sql)) {
-            ?>
-             <div class="stat-item">
-               <span class="stat-number"><?php echo $srow['count1']; ?>+</span>
-               <span class="stat-label">Years Experience</span>
-             </div>
-             <div class="stat-item">
-               <span class="stat-number"><?php echo $srow['count2']; ?>+</span>
-               <span class="stat-label">Projects Completed</span>
-             </div>
-             <div class="stat-item">
-               <span class="stat-number"><?php echo $srow['count3']; ?>+</span>
-               <span class="stat-label">Happy Clients</span>
-             </div>
-           <?php } ?>
-           </div>
 
          </div>
          <div class="col-lg-6">
@@ -60,7 +41,7 @@
                 while ($srow = mysqli_fetch_assoc($sql)) {
                 ?>
                  <div class="swiper-slide">
-                   <img src="itm-admin/user/user_images/<?php echo $srow['userPic']; ?>" alt="" class="img-fluid" loading="lazy">
+                   <img src="itm-admin/user/user_images/<?php echo $srow['userPic']; ?>" alt="" class="img-fluid rounded" loading="lazy">
                  </div>
                <?php } ?>
 

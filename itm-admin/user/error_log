@@ -12,3 +12,42 @@ Stack trace:
 #0 /home/remicogroup/remicoagro.com/itm-admin/user/product-category-add.php(95): PDOStatement->execute()
 #1 {main}
   thrown in /home/remicogroup/remicoagro.com/itm-admin/user/product-category-add.php on line 95
+[09-Mar-2026 13:23:55 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/nasimanwara/public_html/itm-admin/user/product-list.php:74
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/user/product-list.php(74): number_format()
+#1 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/user/product-list.php on line 74
+[09-Mar-2026 13:24:35 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/nasimanwara/public_html/itm-admin/user/product-list.php:74
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/user/product-list.php(74): number_format()
+#1 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/user/product-list.php on line 74
+[09-Mar-2026 13:24:37 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/nasimanwara/public_html/itm-admin/user/product-list.php:74
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/user/product-list.php(74): number_format()
+#1 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/user/product-list.php on line 74
+[09-Mar-2026 13:24:52 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/nasimanwara/public_html/itm-admin/user/product-list.php:74
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/user/product-list.php(74): number_format()
+#1 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/user/product-list.php on line 74
+[09-Mar-2026 13:25:13 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home/nasimanwara/public_html/itm-admin/user/product-list.php:74
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/user/product-list.php(74): number_format()
+#1 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/user/product-list.php on line 74
+[09-Mar-2026 13:27:48 UTC] PHP Warning:  Undefined array key "oldImage" in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php on line 35
+[09-Mar-2026 13:27:48 UTC] PHP Warning:  Undefined variable $PhotoName in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php on line 69
+[09-Mar-2026 13:39:59 UTC] PHP Warning:  Undefined array key "oldImage" in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php on line 35
+[09-Mar-2026 13:39:59 UTC] PHP Warning:  Undefined variable $PhotoName in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php on line 69
+[09-Mar-2026 13:42:31 UTC] PHP Warning:  Undefined array key "oldImage" in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php on line 35
+[09-Mar-2026 13:42:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'photo' cannot be null in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php:108
+Stack trace:
+#0 /home/nasimanwara/public_html/itm-admin/user/product-list-add.php(108): PDOStatement->execute()
+#1 {main}
+  thrown in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php on line 108
+[09-Mar-2026 13:42:53 UTC] PHP Warning:  Undefined array key "oldImage" in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php on line 35
+[09-Mar-2026 13:42:53 UTC] PHP Warning:  Undefined variable $PhotoName in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php on line 69
+[09-Mar-2026 13:44:48 UTC] PHP Warning:  Undefined array key "oldImage" in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php on line 35
+[09-Mar-2026 13:44:48 UTC] PHP Warning:  Undefined variable $PhotoName in /home/nasimanwara/public_html/itm-admin/user/product-list-add.php on line 69

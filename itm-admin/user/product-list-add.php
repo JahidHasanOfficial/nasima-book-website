@@ -149,7 +149,7 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Add Product | <span> <a href="product-list"> <i class="bi bi-table"></i> </a> </span> </h1>
+            <h1>Add New Book | <span> <a href="product-list"> <i class="bi bi-table"></i> </a> </span> </h1>
             <hr>
         </div>
 
@@ -193,12 +193,11 @@
                                         <?php } ?>
                                     </tr>
 
-                                    <tr>
+                                     <tr class="d-none">
                                         <td><label class="control-label"> Category </label></td>
 
                                         <td>
-                                            <select name="category_id" id="" class="form-select" required>
-                                                <option value="" >Select Category</option>
+                                            <select name="category_id" id="" class="form-select" required> 
                                                 <?php
                                                 $ct = mysqli_query($con, "SELECT * FROM product_category WHERE user_id='" . $_SESSION['id'] . "'");
                                                 while ($category = mysqli_fetch_assoc($ct)) {
@@ -224,8 +223,8 @@
 									
 									
                                     <tr>
-                                        <td><label class="control-label"> Product Name </label></td>
-                                        <td><input class="form-control" type="text" name="product_name" placeholder="Product Name" value="<?php echo $product_name ?>" required /></td>
+                                        <td><label class="control-label"> Book Name </label></td>
+                                        <td><input class="form-control" type="text" name="product_name" placeholder="Book Name" value="<?php echo $product_name ?>" required /></td>
                                     </tr>
 									
                                     <tr>
@@ -238,14 +237,14 @@
                                         <td><textarea name="details" id="summernote" placeholder="Details"><?php echo $details; ?></textarea></td>
                                     </tr>
 									
-                                    <tr class="">
-                                        <td><label class="control-label"> Size </label></td>
-                                        <td><input class="form-control" type="text" name="size" placeholder="Size" value="<?php echo ($size !== "") ? $size : 'Na'; ?>" required /></td>
+                                    <tr>
+                                        <td><label class="control-label"> Year </label></td>
+                                        <td><input class="form-control" type="text" name="size" placeholder="Year" value="<?php echo ($size !== "") ? $size : 'Na'; ?>" required /></td>
                                     </tr>
 									
                                     <tr>
-                                        <td><label class="control-label"> Weight </label></td>
-                                        <td><input class="form-control" type="text" name="weight" placeholder="Weight" value="<?php echo $weight ?>" required /></td>
+                                        <td><label class="control-label"> Page </label></td>
+                                        <td><input class="form-control" type="text" name="weight" placeholder="Page" value="<?php echo $weight ?>" required /></td>
                                     </tr>
                                     
 									<tr>
@@ -253,7 +252,7 @@
                                         <td><input class="form-control" type="text" name="price" placeholder="Price" value="<?php echo $price ?>" required /></td>
                                     </tr>
 									
-									<tr class="">
+									<tr>
                                         <td><label class="control-label"> Offer Price </label></td>
                                         <td><input class="form-control" type="text" name="OfferPrice" placeholder="Price" value="<?php echo ($offer_price !== "") ? $offer_price : '0'; ?>" required /></td>
                                     </tr>

@@ -26,8 +26,7 @@
           <div class="col-lg-6">
             <div class="content" data-aos="fade-up" data-aos-delay="200">
               <div class="section-category mb-3">Contact</div>
-              <h2 class="display-5 mb-4">Nemo enim ipsam voluptatem quia voluptas aspernatur</h2>
-              <p class="lead mb-4">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+              <h2 class="display-5 mb-4">If You Feel Free And Need To Contact Please Nock Me ..</h2>
               <?php
               $eq = mysqli_query($con, "select * from contact ORDER BY id DESC LIMIT 1");
               while ($eqrow = mysqli_fetch_array($eq)) {
@@ -47,11 +46,7 @@
                     <i class="bi bi-geo-alt me-3"></i>
                     <span><?php echo $eqrow['address']; ?></span>
                   </div>
-
-                  <a href="<?php echo $eqrow['map_link']; ?>" target="_blank" class="map-link d-inline-flex align-items-center">
-                    Open Map
-                    <i class="bi bi-arrow-right ms-2"></i>
-                  </a>
+ 
                 <?php } ?>
                 </div>
             </div>
@@ -124,11 +119,7 @@
                       <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                     </div>
 
-                    <div class="col-12 text-center">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">Your message has been sent. Thank you!</div>
-
+                    <div class="col-12 text-center">  
                       <button type="submit" name="submit_contact" class="btn btn-submit w-100">Submit Message</button>
                     </div>
 

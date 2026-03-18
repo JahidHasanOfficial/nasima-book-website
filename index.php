@@ -32,12 +32,12 @@
 
     <?php include('books_home.php'); ?>
 
-    <?php include('testimonials.php'); ?>
+    <?php  include('testimonials.php'); ?>
 
     <?php // include('services.php'); 
     ?>
 
-    <?php include('faq.php'); ?>
+    <?php // include('faq.php'); ?>
 
 
   </main>

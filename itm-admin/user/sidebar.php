@@ -55,19 +55,20 @@
     </li>
 
     <?php
-    $product_arr = ['product-category', 'product-category-add', 'product-list', 'product-list-add', 'product-type', 'product-type-add', 'product-type-edit'];
+    $product_arr = ['product-category', 'product-category-add', 'product-list', 'product-list-add', 'order-list', 'order-list-add', 'product-type', 'product-type-add', 'product-type-edit'];
     ?>
     <li class="nav-item">
       <a class="nav-link collapsed <?= is_numeric(array_search($activePage, $product_arr)) ? 'active' : ''; ?>" data-bs-target="#Products" data-bs-toggle="collapse" href="#">
-        <i class="bi bi-list"></i><span>Products </span><i class="bi bi-chevron-down ms-auto"></i>
+        <i class="bi bi-list"></i><span>Books </span><i class="bi bi-chevron-down ms-auto"></i>
       </a>
       <ul id="Products" class="nav-content collapse  <?= is_numeric(array_search($activePage, $product_arr)) ? 'show' : ''; ?>" data-bs-parent="#sidebar-nav">
-
+ <!--
         <li><a href="product-category" class=" <?php echo ($activePage == 'product-category' || $activePage == 'product-category-add' || $activePage == 'product-category-edit') ? 'active' : ''  ?>"><i class="bi bi-menu-app-fill"></i><span> Category </span> </a> </li>
-        <!--
+       
         <li><a href="product-type" class=" <?php echo ($activePage == 'product-type' || $activePage == 'product-type-add' || $activePage == 'product-type-edit') ? 'active' : ''  ?>"><i class="bi bi-menu-app-fill"></i><span> Product Type </span> </a> </li>
         -->
-        <li><a href="product-list" class=" <?php echo ($activePage == 'product-list' || $activePage == 'product-list-add') ? 'active' : ''  ?>"><i class="bi bi-list"></i><span> Product List </span> </a> </li>
+        <li><a href="product-list" class=" <?php echo ($activePage == 'product-list' || $activePage == 'product-list-add') ? 'active' : ''  ?>"><i class="bi bi-list"></i><span> Book List </span> </a> </li>
+          <li><a href="order-list" class=" <?php echo ($activePage == 'order-list' || $activePage == 'order-list') ? 'active' : ''  ?>"><i class="bi bi-list"></i><span> Order List </span> </a> </li>
 
       </ul>
     </li>

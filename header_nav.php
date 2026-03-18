@@ -3,7 +3,7 @@
 
      <a href="index" class="logo d-flex align-items-center me-auto me-xl-0">
        <!-- Uncomment the line below if you also wish to use an image logo -->
-       <!-- <img src="assets/img/logo.webp" alt=""> -->
+       <img src="assets/img/nasima-book-logo.png">  
        <h1 class="sitename fw-bold">Nasima Anwara</h1>
      </a>
 

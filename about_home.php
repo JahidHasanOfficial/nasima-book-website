@@ -7,15 +7,21 @@
         <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
       </svg>
     </div>
-    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem</p>
-  </div><!-- End Section Title -->
+   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
 
     <div class="row align-items-center">
-      <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
+     
+	 <?php
+          $eq = mysqli_query($con, "select * from about_section where type=1 ");
+          while ($eqrow = mysqli_fetch_array($eq)) {
+
+          ?>
+
+	 <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
         <div class="about-image">
-          <img src="assets/img/profile/profile-square-2.webp" alt="Profile Image" class="img-fluid rounded-4">
+          <img src="itm-admin/user/user_images/<?php echo $eqrow['userPic']; ?>" alt="Profile Image" class="img-fluid rounded-4">
         </div>
       </div>
 
@@ -23,53 +29,11 @@
         <div class="about-content">
           <span class="subtitle">About Me</span>
 
-          <?php
-          $eq = mysqli_query($con, "select * from about_section where type=1 ");
-          while ($eqrow = mysqli_fetch_array($eq)) {
-
-          ?>
+          
 
             <h2><?php echo $eqrow['about_title']; ?></h2>
             <p class="mb-4"><?php echo $eqrow['about_subtitle']; ?></p>
-            <div class="personal-info">
-              <div class="row g-4">
-                <!-- <div class="col-6">
-                    <div class="info-item">
-                      <span class="label">Name</span>
-                      <span class="value">Eliot Johnson</span>
-                    </div>
-                  </div> -->
-
-                <div class="col-6">
-                  <div class="info-item">
-                    <span class="label"><?php echo $eqrow['support1']; ?></span>
-                    <!-- <span class="value">+123 456 7890</span> -->
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="info-item">
-                    <span class="label"><?php echo $eqrow['support2']; ?></span>
-                    <!-- <span class="value">26 Years</span> -->
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="info-item">
-                    <span class="label"><?php echo $eqrow['support3']; ?></span>
-                    <!-- <span class="value">email@example.com</span> -->
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="info-item">
-                    <span class="label"><?php echo $eqrow['support4']; ?></span>
-                    <!-- <span class="value">Lorem Engineer</span> -->
-                  </div>
-                </div>
-
-              </div>
-            </div>
+             
 
           <?php } ?>
 
